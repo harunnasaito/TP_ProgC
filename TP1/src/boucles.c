@@ -1,20 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int compteur = 5; // modifier la taille du triangle
-    int i = 1;
+    int compteur = 5; // changer la valeur (doit être < 10)
 
-    while (i <= compteur) {
-        int j = 1;
-        while (j <= i) {
-            if (j % 2 == 0)
+    for (int i = 1; i <= compteur; i++) {
+        for (int j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
                 printf("# ");
-            else
+            } else {
                 printf("* ");
-            j++;
+            }
         }
         printf("\n");
-        i++;
     }
 
     return 0;
