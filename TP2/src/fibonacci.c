@@ -1,36 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    printf("Entrez la valeur de n : ");
-    scanf("%d", &n);
+    int n = 7;
+    int a = 0, b = 1, c;
 
-    
-    if (n < 0) {
-        printf("n doit être un entier positif.\n");
-        return 0;
-    }
+    printf("%d, %d", a, b);
 
-    long long U0 = 0, U1 = 1;
-
-    printf("Suite de Fibonacci jusqu'à U%d :\n", n);
-
-    if (n == 0) {
-        printf("%lld\n", U0);
-        return 0;
-    }
-
-    
-    printf("%lld, %lld", U0, U1);
-
-    
     for (int i = 2; i <= n; i++) {
-        long long Un = U0 + U1;
-        printf(", %lld", Un);
-        U0 = U1;
-        U1 = Un;
+        c = a + b;
+        printf(", %d", c);
+        a = b;
+        b = c;
     }
 
-    printf("\n");
     return 0;
 }
